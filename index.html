@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Исторический справочник о биологических происшествиях и эпидемиях в СССР и России.">
+  <title>Биологические происшествия — СССР и Россия</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-shade"></div>
+    <nav class="topbar">
+      <a class="brand" href="#" aria-label="На главную">БИО<span>ИСТОРИЯ</span></a>
+      <a class="nav-link" href="#events">Список происшествий</a>
+    </nav>
+    <div class="hero-content">
+      <p class="eyebrow">ИСТОРИЧЕСКИЙ СПРАВОЧНИК</p>
+      <h1>Биологические происшествия<br><span>в СССР и России</span></h1>
+      <p class="hero-description">Истории эпидемий, лабораторных инцидентов и биологических рисков — с датами, контекстом и источниками для дальнейшего изучения.</p>
+      <a class="primary-button" href="#events">Изучить события <span aria-hidden="true">↓</span></a>
+    </div>
+    <div class="hero-note"><span class="pulse"></span> 9 исторических материалов</div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <p class="eyebrow">О ПРОЕКТЕ</p>
+        <h2>Что произошло<br>и чему это научило?</h2>
+      </div>
+      <p>В этом справочнике собраны известные биологические происшествия и связанные с ними риски. Важно различать техногенную аварию, вспышку инфекции, испытательную деятельность и общую проблему биологической безопасности: это не одно и то же.</p>
+    </section>
+
+    <section class="events-section" id="events">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">АРХИВ СОБЫТИЙ</p>
+          <h2>Выбери историю</h2>
+        </div>
+        <label class="search-wrap">
+          <span class="sr-only">Поиск по событиям</span>
+          <span aria-hidden="true">⌕</span>
+          <input id="searchInput" type="search" placeholder="Поиск по названию или году…">
+        </label>
+      </div>
+      <div id="eventGrid" class="event-grid" aria-live="polite"></div>
+      <p id="noResults" class="no-results" hidden>Ничего не найдено. Попробуй изменить запрос.</p>
+    </section>
+
+    <section class="methodology">
+      <div class="method-icon" aria-hidden="true">i</div>
+      <div>
+        <h2>Как читать этот список</h2>
+        <p>Некоторые материалы описывают конкретные инциденты, а некоторые — длительные испытания, природные очаги инфекций или общие проблемы безопасности. Для обобщённых случаев указано, что это не одна отдельная авария. Числа и трактовки исторических событий могут отличаться в разных источниках.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">БИО<span>ИСТОРИЯ</span></div>
+    <p>Учебный исторический проект · Материалы приведены в информационных целях</p>
+    <a href="#events">Вернуться к списку ↑</a>
+  </footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Закрыть историю">×</button>
+      <p class="eyebrow" id="modalMeta"></p>
+      <h2 id="modalTitle"></h2>
+      <p class="modal-location" id="modalLocation"></p>
+      <div class="modal-rule"></div>
+      <div id="modalBody" class="modal-body"></div>
+      <h3>Источники и дополнительное чтение</h3>
+      <ul id="modalSources" class="source-list"></ul>
+      <div class="modal-footer"><span>БИОИСТОРИЯ</span><button class="secondary-button" id="modalDone">Понятно</button></div>
+    </section>
+  </div>
+</body>
+</html>
